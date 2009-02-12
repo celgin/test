@@ -1,0 +1,28 @@
+-# title "stories page/new"
+= error_messages_for :user
+
+-form_for :user, @user do |f|
+  %div{:style => "font-size:24px"}
+    Promoter Sign Up
+  %div{:style => "padding:6px; font-size:16px; text-align:right; width:360px; background-color:#f1f1f1; border:1px solid #B9B9B9;"}  
+  
+    %p
+    <label>Username:</label>
+    = f.text_field :username
+    %p
+    <label>first name:</label>
+    = f.text_field :firstname
+    %p
+    <label>last name:</label>
+    = f.text_field :lastname
+    %p
+    <label>email:</label>
+    = f.text_field :email
+    %p
+    <label>Password:</label>
+    = f.password_field :password
+    %p
+    <label>Confirm Password:</label>
+    = f.password_field :password_confirmation
+    %p
+    = submit_tag "Register"

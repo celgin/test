@@ -1,0 +1,12 @@
+= render :partial => '/layouts/page_headings'
+
+- content_for :inner do
+
+  -#= yield :page_headings
+  = yield
+
+
+= render :partial => '/layouts/main'
+
+
+    

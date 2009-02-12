@@ -1,0 +1,48 @@
+!!!
+%html{html_attrs}
+  %head
+  = yield :head
+  = stylesheet_link_tag '/stylesheets/application.css'
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"
+  = javascript_include_tag 'application.js'
+  = javascript_include_tag :defaults
+  %title
+    = yield :page_title
+    | Localini
+  %body 
+    #wrapper_centered
+    
+      #inside{:class => ('if_js' if @only_js)}
+        #menu_top.clearfix
+          #menu_left
+            .logo 
+              = link_to image_tag('/images/localini_logo.png'), zones_path
+          #menu_right
+            %ul
+              %li
+                = link_to 'Home', zones_path, { :class => ('active' if params[:controller] == 'zones') }
+              %li
+                = link_to 'venues'
+              %li
+                =# link_to 'profile', profiles_path, { :class => ('active' if params[:controller] == 'profiles') }
+              %li 
+                = link_to 'earnings'
+              %li
+            %login_logout
+              - if @current_user
+                Logged in as:
+                = @current_user.username
+                = link_to "Logout", session_path, :method => :delete 
+              - else
+                Not logged in
+                = link_to 'Login', new_session_path
+                |
+                = link_to 'sign-up', :action => 'registration' 
+              
+          .redline
+          - unless flash[:notice].blank? 
+            .notification
+              = flash[:notice]
+        .aspacer
+        .innerContainer
+          = yield :inner

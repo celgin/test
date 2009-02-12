@@ -1,0 +1,219 @@
+// included in application
+
+.aspacer
+  :float left
+  :width 900px
+  :height 1px
+  :clear all
+
+a img
+  :border none
+
+.fieldWithErrors
+  :border 3px solid #f66
+
+.clearfix, .heading
+  :display block
+  &:after
+    :content " "
+    :display block
+    :height 0px
+    :clear both
+    :visibility hidden
+    :font-size 0px
+
+* html 
+  .clearfix, .heading
+    :height 1%
+
+.floatright
+  :float right
+
+.floatleft
+  :float left
+
+#wrapper_centered
+  :text-align left
+  :width = !page_width
+  :margin 0 auto -8.6em
+  :height auto !important
+  :min-height 100%
+
+
+h2
+  :clear both
+  :margin 0
+  :padding 10px 0
+
+.tags 
+  a
+    :padding 0 3px
+
+
+
+
+body
+  :background-color #f1f1f1
+  :font-family Helvetica, Arial, sans-serif
+  :text-align center
+  :width 964px
+
+  #wrapper_centered
+  :text-align left
+  :width = !page_width
+  :margin 0 auto -8.6em
+  :height auto !important
+  :min-height 100%
+
+  #inside
+    :background-color #fff
+    :padding 10px 10px 20px 10px
+    :overflow hidden
+
+    #menu_top
+      :float left
+      :background-color #fff
+      :width 944px
+      #menu_left
+        :float left
+        :width 300px
+        :overflow hidden
+      #menu_right
+        :text-align right
+        :line-height 40px
+        :overflow hidden
+        :padding-right 10px
+        :float right
+        ul 
+          :float left
+          :list-style none
+          :display block
+          :margin 0
+          li
+            :display block
+            :list-style none
+            :float left
+            :padding 0px 6px
+            :z-index 334
+            a
+              :color #333
+              :text-decoration none
+              :display block
+              :margin-top 13px
+              :padding 0px 8px
+              :line-height 29px
+              &:hover
+                :background url(/images/menu_top_link_hover.png) repeat-x 0px 0px
+                :color #cc0000
+                :border 1px solid #CCC
+                :padding 0px 7px
+              &.active
+                :z-index 700 #this is not working
+                :color #cc0000
+                :border 1px solid #cc0000
+                :border-bottom 1px solid #fff
+                :background url(/images/menu_top_link_hover.png) repeat-x 0px 0px
+                &:hover
+                  :padding 0px 8px
+          login_logout
+            :float right
+            :color #999
+            :font-size 12px
+            a
+              :text-decoration none
+              :color #cc0000
+              &:hover
+                :color #fff
+      .redline
+        :z-index 233 #this is not working
+        :margin-top -1px
+        :width 100%
+        :height 1px
+        :background-color #cc0000
+        :float left
+      .notification
+        :float left
+        :width 926px
+        :text-align center
+        :padding 10px 5px
+        :font Verdana
+        :clear all
+        :color #104d4d
+        :background-color #D9f6f7
+        :border 2px solid #85abbf
+        :font-size 22px
+     
+#zones
+  :float left	
+  :padding-top 10px
+  :padding-left 22px
+  .addProfilePicture
+    :float left
+    :width 80px
+    :height 80px
+    :background-color #DCE5FF
+    :font-size 22px
+    :text-align center
+    :padding 10px
+    a
+      :color #CC0000
+      :text-decoration none
+
+
+#profileArea
+  :float left
+  :padding 10px 20px
+  .editYourImage
+    :float left
+
+br.both
+  :clear both  
+
+#backgroundPopup 
+  :display none  
+  :position fixed  
+  :position absolute 
+  /* hack for internet explorer 6*/  
+  :height 100%
+  :width 100%  
+  :top 0
+  :left 0  
+  :background #000000  
+  :border 1px solid #cecece  
+  :z-index 1
+
+#popupContact  
+  :display none
+  :position fixed  
+  :_position absolute 
+  /* hack for internet explorer 6*/  
+  :height 384px
+  :width 408px  
+  :background #FFFFFF  
+  :border 2px solid #cecece  
+  :z-index 2
+  :padding 12px  
+  :font-size 13px  
+
+#popupContact h1
+  :text-align left  
+  :color #6FA5FD 
+  :font-size 22px  
+  :font-weight 700  
+  :border-bottom 1px dotted #D3D3D3  
+  :padding-bottom 2px
+  :margin-bottom 20px  
+
+#popupContactClose
+  :font-size 14px
+  :line-height 14px  
+  :right 6px
+  :top 4px 
+  :position absolute  
+  :color #6fa5fd
+  :font-weight 700  
+  :display block 
+
+#button
+  :text-align center 
+  :margin 100px

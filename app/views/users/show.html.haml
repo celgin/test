@@ -1,0 +1,17 @@
+-title @user.name
+
+%div{:style => 'padding:20px;float:left;'}
+  = image_tag @user.photo.url(:thumb)
+
+  = simple_format h(@user.description)
+
+
+
+  %p
+    = link_to "Edit", edit_user_path(@user) 
+    |
+    = link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete 
+    |
+    = link_to "View All", users_path
+    |
+    = link_to "back", zone_path(@user)

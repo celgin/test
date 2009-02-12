@@ -1,0 +1,38 @@
+= stylesheet_link_tag '/stylesheets/application.css'
+= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"
+= javascript_include_tag 'application.js'
+= javascript_include_tag :defaults
+-form_tag session_path do
+  %div{:style => "font-size:24px"}
+    Promoter Log in
+  %div{:style => "padding:6px; font-size:16px; text-align:right; width:320px; background-color:#f1f1f1; border:1px solid #B9B9B9;"}  
+    %p
+      <label>Username:</label>
+      = text_field_tag 'login'
+    %p
+      <label>Password:</label>
+      = password_field_tag 'password'
+    %p
+      = submit_tag 'login'
+      or 
+      = link_to 'sign-up', :action => 'registration' 
+      
+  
+  .center
+    %div{:id => "button"}
+      = submit_tag "submit", :id => "button", :value => "Press me please!" 
+      %br
+      this is a jsscript that is not currently working right
+    %div{:id => "popupContact"}
+      %a{:id => "popupContactClose", :style => "border: 1px solid #CC0000;"}
+        x  
+      %h1 
+        Title of our cool popup, yay!  
+      %p{:id => "contactArea"}  
+        Here we have a simple but interesting sample of our new stuning and smooth popup. As you can see jQuery and CSS does it easy...  
+      %br  
+        We can use it for popup-forms and more... just experiment!  
+      %br  
+        Press ESCAPE, Click on X (right-top) or Click Out from the popup to close the popup!  
+      %br  
+        = link_to 'continue', zones_path
